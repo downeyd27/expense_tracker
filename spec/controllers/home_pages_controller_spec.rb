@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe ProjectsController, type: :controller do
+RSpec.describe HomePagesController, type: :controller do
   include Capybara::DSL
 
   describe "GET #index" do
