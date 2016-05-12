@@ -1,7 +1,7 @@
 module ApplicationHelper
   # Returns the full title on a per-page basis
   def base_title
-    "Dillon Downey | Index"
+    controller_name
   end
 
   def full_title(page_title)
