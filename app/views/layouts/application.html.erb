@@ -3,12 +3,28 @@
 <head>
   <title>RailsLayout</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta content='IE=edge' http-equiv='X-UA-Compatible'>
+  <%= display_meta_tags %>
   <%= csrf_meta_tags %>
+  <%= render 'layouts/shim' %>
 </head>
-<body>
+<body class="<%= controller_name action_name %>">
+  <h1 class="sr-only">Dillon Downey's Website</h1>
+  <%= link_to "Skip to main content", "#mainSection", class:"sr-only" %>
+  <%= link_to "Skip to footer", "#footerSection", class:"sr-only" %>
 
-<%= yield %>
+  <%= render 'layouts/navbar_top' %>
 
+  <%= render "layouts/flash_message" %>
+
+  <main id="mainSection">
+    <%= yield %>
+  </main>
+
+  <%= render 'layouts/footer.html' %>
+
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </body>
 </html>
