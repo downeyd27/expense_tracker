@@ -1,6 +1,17 @@
 .debug { outline: 1px solid red; }
+h1,h2,h3,h4,p,div,span,section,figure,img,ul,li,a,footer,nav,body {
+  @extend .debug;
+ }
 
-h1,h2,h3,h4,h5,h6,p,div,span,section,figure,img,ul,ol,li,a,footer,nav,article,body { @extend .debug; }
+.btn {
+  background-color: lightgrey;
+  border: 1px solid $black;
+  border-radius: 5px;
+  margin: 10px;
+  transition: all 0.5s ease-in-out;
+  padding: 5px;
+  &:hover { box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75); }
+}
 
 .sr-only {
   position: absolute;
@@ -16,8 +27,8 @@ h1,h2,h3,h4,h5,h6,p,div,span,section,figure,img,ul,ol,li,a,footer,nav,article,bo
 html { height: 100%; }
 
 body {
-  background-color: navy;
-  color: black;
+  background-color: lightgrey;
+  color: $black;
   font-family: serif;
 }
 
@@ -27,8 +38,8 @@ h1, h2 {
 
 h1, h2, h3 {
   text-align: center;
-  background-color: grey;
-  border: 1px solid black;
+  background-color: lightgrey;
+  border: 1px solid $black;
   padding: .4em .4em;
   font-family: serif;
 }
@@ -36,7 +47,7 @@ h1, h2, h3 {
 p {
   margin: 0.5em 25px;
   font-size: 1.2em;
-  color: black;
+  color: $black;
   display: block;
 }
 
@@ -45,7 +56,7 @@ ul {
 }
 
 a {
-  color: black;
+  color: $black;
   text-decoration: none;
   //&:visited { color: #0c0 }
   &:link    { color: #c00; }
@@ -55,7 +66,12 @@ a {
 
 // NAVBAR CSS
 
-.navContainer {
+nav {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: grey;
   border-bottom: 1px solid $black;
   box-shadow: 0px 3px 7px 0px rgba(50, 50, 50, 0.75);
   font-size: 1.5em;
@@ -65,30 +81,9 @@ a {
     list-style-type: none;
     padding: 0;
   }
-}
-
-.navContainer, .brandLogoContainer {
-  display: flex;
-  align-items: center;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-}
-
-.brandLogoContainer {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  margin-left: 20px;
-}
-
-.navLinkContainer__link, .crudLinks a {
-  background-color: $grey;
-  border: 1px solid black;
-  border-radius: 5px;
-  margin: 10px;
-  transition: all 0.5s ease-in-out;
-  padding: 5px;
-  &:hover { box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75); }
+  a {
+    @extend .btn;
+  }
 }
 
 .socialMediaContainer {
@@ -99,11 +94,14 @@ a {
   }
 }
 
-// FOOTER
 footer {
+  position: fixed;
+  display: block;
+  width: 100%;
+  bottom: 0;
   border-top: 1px solid $black;
   box-shadow: 0px -2px 7px 0px rgba(50, 50, 50, 0.75);
-  background-color: $blue;
+  background-color: grey;
 }
 
 // FLASH MESSAGE CSS
@@ -116,7 +114,7 @@ footer {
 
 .flash_message {
   font-size: 2em;
-  color: black;
+  color: $black;
   z-index: 999;
   /*position: fixed;*/
   font-weight: bold;

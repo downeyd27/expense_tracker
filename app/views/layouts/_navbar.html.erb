@@ -1,19 +1,14 @@
-<nav class="blue navContainer">
+<nav>
   <h2 class="sr-only">Main Navigation</h2>
-  <!-- TODO: Add a brand logo -->
-  <div class="brandLogoContainer">
-    <%= link_to "Dillon Downey", root_path %>
-  </div>
-  <div class="navLinkContainer">
-    <ul>
-      <li>
-        <%= link_to "Old Blog", "https://downeyd27.github.io/blog/blog-index.html",
-         target: "blank", class:" navLinkContainer__link" %>
-      </li>
-      <li>
-        <%= link_to "Resume", "https://resume.creddle.io/resume/1rktq4ubpei",
-         class:" navLinkContainer__resumeLink navLinkContainer__link"  %>
-      </li>
-    </ul>
-  </div>
+
+  <%= link_to "Home", root_path %>
+  <ul>
+    <li>
+      <%= link_to "Contact", "https://downeyd27.github.io/blog/blog-index.html",
+      target: "blank" %>
+    </li>
+    <li>
+      <%= link_to "About", "https://resume.creddle.io/resume/1rktq4ubpei" %>
+    </li>
+  </ul>
 </nav>
