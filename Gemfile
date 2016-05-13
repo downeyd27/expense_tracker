@@ -21,6 +21,12 @@ group :development do
   gem 'better_errors', '~> 2.1', '>= 2.1.1'
   gem 'binding_of_caller', '~> 0.7.2'
   gem 'byebug', '~> 8.2', '>= 8.2.4'
+  gem 'guard'
+  gem 'guard-coffeescript', require: false
+  gem 'guard-sass', require: false
+  gem 'guard-rspec', require: false
+  gem 'guard-livereload', '~> 2.5', require: false
+  gem 'rack-livereload'
   gem 'quiet_assets', '~> 1.1'
   gem 'rails_real_favicon'
   gem 'spring', '~> 1.7', '>= 1.7.1'
