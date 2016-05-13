@@ -1,4 +1,19 @@
 Rails.application.configure do
+  # Add Rack::LiveReload to top for better_errors
+  config.middleware.insert_before Rack::Lock, Rack::LiveReload
+
+  # Specifying Rack::LiveReload options.
+  config.middleware.use(Rack::LiveReload,
+    min_delay:        500,    # default 1000
+    max_delay:        10_000, # default 60_000
+    live_reload_port: 56789,  # default 35729
+    host:             'myhost.cool.wow',
+    ignore:           [ %r{dont/modify\.html$} ]
+  )
+  # Otherwise:
+  # Add Rack::LiveReload to the bottom of the middleware stack with the default options:
+  # config.middleware.insert_after ActionDispatch::Static, Rack::LiveReload
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
