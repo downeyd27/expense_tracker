@@ -323,7 +323,7 @@ DEPENDENCIES
   meta-tags (~> 2.1)
   meta_request
   newrelic_rpm
-  paperclip
+  paperclip (= 4.3.6)
   pg
   pry (~> 0.10.3)
   pry-rails
