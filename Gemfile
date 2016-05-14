@@ -13,6 +13,7 @@ gem 'puma'
 gem 'pg'
 gem 'rails', '4.2.6'
 gem 'sass-rails', '~> 5.0'
+gem 'sprockets', '~> 3.0'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 
@@ -27,6 +28,8 @@ group :development do
   gem 'guard-sass', require: false
   gem 'guard-rspec', require: false
   gem 'guard-livereload', '~> 2.5', require: false
+
+  gem 'meta_request' # For Rails Panel in Chrome Dev Tools... May need to specificy livereload/Rack::Reload to ignore tmp/ folder
   gem 'rack-livereload'
   gem 'quiet_assets', '~> 1.1'
   gem 'rails_real_favicon'
@@ -44,6 +47,7 @@ end
 group :development, :test do
   gem 'launchy', '~> 2.4', '>= 2.4.3'
   gem 'pry', '~> 0.10.3'
+  gem 'pry-rails'
   gem 'rspec-rails', '~> 3.4', '>= 3.4.2'
 end
 
