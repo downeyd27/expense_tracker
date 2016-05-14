@@ -69,6 +69,10 @@ guard :rspec, cmd: "bundle exec rspec" do
   end
 end
 
+guard :rspec, cmd: 'rspec -f html -o ./tmp/spec_results.html', launchy: './tmp/spec_results.html' do
+  # ...
+end
+
 coffeescript_options = {
   input: 'coffeescripts',
   output: 'javascripts',
