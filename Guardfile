@@ -83,4 +83,35 @@ guard 'coffeescript', coffeescript_options do
   coffeescript_options[:patterns].each { |pattern| watch(pattern) }
 end
 
+# TODO: ERROR occurs with guard not  recogonizing $variables, but
+# not color.scss.
 guard 'sass', input: 'app/assets/stylesheets', noop: true
+
+###
+# Sample Guardfile block for Guard::Uglify
+#
+# :input        - input file to compress
+# :output       - file to write compressed output to
+# :run_at_start - compressed input file when guard starts
+# :uglifier     - options to be passed to the uglifier gem
+###
+
+# TODO: Add guard to watch all js. May need to add guard-concat
+guard "uglify", input: "app/assets/javascripts/application.js", output: "public/javascripts/application.js"
+# guard "uglify", input: "app/assets/javascripts/application.js", output: "public/javascripts/application.js"
+
+# TODO: "Uncomment and set up ENV for AWS"
+# Uncomment to
+# opts = {
+#   bucket:            ENV.fetch('S3_BUCKET_NAME'),
+#   access_key_id:     ENV.fetch('AWS_ACCESS_KEY_ID'),
+#   secret_access_key: ENV.fetch('AWS_SECRET_ACCESS_KEY'),
+#   s3_region:         ENV.fetch('AWS_REGION'),
+#   s3_host_name:      's3-us-west-2.amazonaws.com',
+#   s3_permissions:    :public_read
+# }
+#
+# guard 's3', opts do
+#   # TODO: Verify correct watch path
+#   watch(/images.*/)
+# end

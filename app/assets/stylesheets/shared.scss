@@ -1,5 +1,5 @@
 .debug { outline: 1px solid red; }
-h1,h2,h3,h4,p,div,span,section,figure,img,ul,li,a,footer,nav,body {
+h1,h2,h3,p,div,span,section,figure,img,ul,li,a,footer,nav {
   @extend .debug;
  }
 
@@ -24,12 +24,8 @@ h1,h2,h3,h4,p,div,span,section,figure,img,ul,li,a,footer,nav,body {
   border: 0;
 }
 
-html { height: 100%; }
-
 body {
   background-color: lightgrey;
-  color: $black;
-  font-family: serif;
 }
 
 h1, h2 {

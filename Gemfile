@@ -33,7 +33,10 @@ group :development do
   gem 'guard-livereload', '~> 2.5', require: false
   gem 'guard-uglify', require: false
   gem 'letter_opener'
-  gem 'meta_request' # For Rails Panel in Chrome Dev Tools... May need to specificy livereload/Rack::Reload to ignore tmp/ folder
+  # For Rails Panel in Chrome Dev Tools...
+  # TODO: Specify livereload/Rack::Reload to ignore tmp/ folder
+  # otherwise livereload will continue to reload.
+  # gem 'meta_request'
   gem 'rack-livereload'
   gem 'quiet_assets', '~> 1.1'
   gem 'rails_real_favicon'

@@ -41,6 +41,10 @@ GEM
     autoprefixer-rails (6.3.6)
       execjs
     awesome_print (1.6.1)
+    aws-s3 (0.6.3)
+      builder
+      mime-types
+      xml-simple
     aws-sdk (1.66.0)
       aws-sdk-v1 (= 1.66.0)
     aws-sdk-v1 (1.66.0)
@@ -54,7 +58,6 @@ GEM
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
     byebug (8.2.5)
-    callsite (0.0.11)
     capybara (2.7.1)
       addressable
       mime-types (>= 1.16)
@@ -95,7 +98,6 @@ GEM
       railties (>= 3.0.0)
     ffi (1.9.10)
     formatador (0.2.5)
-    git-version-bump (0.15.1)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     guard (2.13.0)
@@ -121,9 +123,15 @@ GEM
       guard (~> 2.1)
       guard-compat (~> 1.1)
       rspec (>= 2.99.0, < 4.0)
+    guard-s3 (0.1.2)
+      aws-s3
+      guard
     guard-sass (1.6.0)
       guard (>= 2.8.0)
       sass (>= 3.1)
+    guard-uglify (1.0.0)
+      guard (>= 0.2.2)
+      uglifier
     http-cookie (1.0.2)
       domain_name (~> 0.5)
     http_parser.rb (0.6.0)
@@ -138,6 +146,8 @@ GEM
     json (1.8.3)
     launchy (2.4.3)
       addressable (~> 2.3)
+    letter_opener (1.4.1)
+      launchy (~> 2.2)
     listen (3.0.6)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9.7)
@@ -148,10 +158,6 @@ GEM
       mime-types (>= 1.16, < 4)
     meta-tags (2.1.0)
       actionpack (>= 3.0.0)
-    meta_request (0.4.0)
-      callsite (~> 0.0, >= 0.0.11)
-      rack-contrib (~> 1.1)
-      railties (>= 3.0.0, < 5.1.0)
     method_source (0.8.2)
     mime-types (2.99.1)
     mimemagic (0.3.0)
@@ -183,9 +189,6 @@ GEM
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
     rack (1.6.4)
-    rack-contrib (1.4.0)
-      git-version-bump (~> 0.15)
-      rack (~> 1.4)
     rack-livereload (0.3.16)
       rack
     rack-test (0.6.3)
@@ -300,6 +303,7 @@ GEM
       binding_of_caller (>= 0.7.2)
       railties (>= 4.0)
       sprockets-rails (>= 2.0, < 4.0)
+    xml-simple (1.1.5)
     xpath (2.0.0)
       nokogiri (~> 1.3)
 
@@ -322,12 +326,14 @@ DEPENDENCIES
   guard-coffeescript
   guard-livereload (~> 2.5)
   guard-rspec
+  guard-s3
   guard-sass
+  guard-uglify
   jbuilder (~> 2.0)
   jquery-rails
   launchy (~> 2.4, >= 2.4.3)
+  letter_opener
   meta-tags (~> 2.1)
-  meta_request
   newrelic_rpm
   paperclip (= 4.3.6)
   pg
