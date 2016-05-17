@@ -1,0 +1,670 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+ */
+/* line 1, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/shared.scss */
+.debug, h1, h2, h3, p, div, span, section, figure, img, ul, li, a, footer, nav {
+  outline: 1px solid red;
+}
+
+/* line 6, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/shared.scss */
+.btn, nav a {
+  background-color: lightgrey;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 10px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  padding: 5px;
+}
+/* line 13, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/shared.scss */
+.btn:hover, nav a:hover {
+  box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+}
+
+/* line 16, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/shared.scss */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* line 27, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/shared.scss */
+html {
+  height: 100%;
+}
+
+/* line 31, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/shared.scss */
+.site {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: lightgrey;
+}
+
+/* line 38, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/shared.scss */
+.siteContent {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+/* line 42, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/shared.scss */
+h1, h2 {
+  letter-spacing: 1px;
+}
+
+/* line 46, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/shared.scss */
+h1, h2, h3 {
+  text-align: center;
+  background-color: lightgrey;
+  border: 1px solid black;
+  padding: .4em .4em;
+  font-family: serif;
+}
+
+/* line 54, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/shared.scss */
+p {
+  margin: 0.5em 25px;
+  font-size: 1.2em;
+  color: black;
+  display: block;
+}
+
+/* line 61, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/shared.scss */
+ul {
+  list-style-type: none;
+}
+
+/* line 65, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/shared.scss */
+a {
+  color: black;
+  text-decoration: none;
+}
+/* line 69, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/shared.scss */
+a:link {
+  color: #c00;
+}
+/* line 70, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/shared.scss */
+a:hover {
+  color: #00c;
+}
+/* line 71, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/shared.scss */
+a:active {
+  color: #ccc;
+}
+
+/* line 77, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/shared.scss */
+nav {
+  background-color: grey;
+  border-bottom: 1px solid black;
+  box-shadow: 0px 3px 7px 0px rgba(50, 50, 50, 0.75);
+  font-size: 1.5em;
+}
+/* line 82, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/shared.scss */
+nav .navContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/* line 87, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/shared.scss */
+nav ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  list-style-type: none;
+  padding: 0;
+}
+
+@media screen and (max-width: 520px) {
+  /* line 113, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/shared.scss */
+  .navContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+/* Medium screens */
+/* Small screens */
+/* line 131, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/shared.scss */
+.socialMediaContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/* line 134, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/shared.scss */
+.socialMediaContainer img {
+  margin: 4px 0 0 0;
+}
+
+/* line 139, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/shared.scss */
+footer {
+  border-top: 1px solid black;
+  box-shadow: 0px -2px 7px 0px rgba(50, 50, 50, 0.75);
+  background-color: grey;
+}
+
+/* line 151, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/shared.scss */
+.flash_message {
+  font-size: 2em;
+  color: #0f0f0f;
+  font-weight: bold;
+  margin: 20px;
+}
+/* line 156, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/shared.scss */
+.flash_message .flash_error {
+  border: solid 4px #900;
+  background-color: #FF6565;
+}
+/* line 159, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/shared.scss */
+.flash_message .flash_success {
+  border: solid 4px #26722D;
+  background-color: #A4E7A0;
+}
+/* line 162, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/shared.scss */
+.flash_message .flash_notice {
+  border: solid 4px #f9fb19;
+  background-color: #f8f99d;
+}
+/* line 165, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/shared.scss */
+.flash_message p {
+  font-size: 110%;
+  margin: 15px 0;
+}
+
+/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
+ */
+/* line 8, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/normalize.css */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+/* line 18, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/normalize.css */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ * 2. Add the correct display in IE.
+ */
+/* line 31, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/normalize.css */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  /* 1 */
+  display: block;
+}
+
+/**
+ * Add the correct display in IE 9-.
+ */
+/* line 50, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/normalize.css */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+/* line 61, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/normalize.css */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+/* line 70, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/normalize.css */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Add the correct display in IE 10-.
+ * 1. Add the correct display in IE.
+ */
+/* line 79, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/normalize.css */
+template,
+[hidden] {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+/* line 92, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/normalize.css */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */
+}
+
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
+ */
+/* line 102, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/normalize.css */
+a:active,
+a:hover {
+  outline-width: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+/* line 115, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/normalize.css */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+/* line 125, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/normalize.css */
+b,
+strong {
+  font-weight: inherit;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+/* line 134, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/normalize.css */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+/* line 143, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/normalize.css */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+/* line 152, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/normalize.css */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+/* line 161, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/normalize.css */
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+/* line 170, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/normalize.css */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+/* line 179, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/normalize.css */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 187, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/normalize.css */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 191, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/normalize.css */
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+/* line 202, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/normalize.css */
+img {
+  border-style: none;
+}
+
+/**
+ * Hide the overflow in IE.
+ */
+/* line 210, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/normalize.css */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+/* line 222, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/normalize.css */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct margin in IE 8.
+ */
+/* line 234, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/normalize.css */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+/* line 243, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/normalize.css */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change font properties to `inherit` in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+/* line 257, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/normalize.css */
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Restore the font weight unset by the previous rule.
+ */
+/* line 269, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/normalize.css */
+optgroup {
+  font-weight: bold;
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+/* line 278, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/normalize.css */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+/* line 288, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/normalize.css */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+/* line 299, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/normalize.css */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+/* line 310, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/normalize.css */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+/* line 322, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/normalize.css */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Change the border, margin, and padding in all browsers (opinionated).
+ */
+/* line 333, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/normalize.css */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+/* line 346, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/normalize.css */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+/* line 359, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/normalize.css */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+/* line 368, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/normalize.css */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+/* line 378, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/normalize.css */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+/* line 388, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/normalize.css */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
+ */
+/* line 397, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/normalize.css */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Correct the text style of placeholders in Chrome, Edge, and Safari.
+ */
+/* line 406, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/normalize.css */
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+/* line 416, /Users/dillondowney/Development/Projects/rails_layout/app/assets/stylesheets/normalize.css */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
