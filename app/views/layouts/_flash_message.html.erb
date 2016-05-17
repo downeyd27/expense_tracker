@@ -1,9 +1,9 @@
-<div class="flashMessageContainer alert flash-message">
-  <%if flash.present? %>
-    <% flash.each do |name, msg| %>
-      <% if msg.is_a?(String) %>
-        <%= content_tag(:div, msg, class: "alert alert_#{name} flash_#{name}") %>
-      <% end %>
-    <%end%>
-  <% end %>
-</div>
+<%if flash.present? %>
+  <div class="flashMessageContainer alert flash-message">
+      <% flash.each do |name, msg| %>
+        <% if msg.is_a?(String) %>
+          <%= content_tag(:div, msg, class: "alert alert_#{name} flash_#{name}") %>
+        <% end %>
+      <%end%>
+  </div>
+<% end %>
