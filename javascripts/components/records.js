@@ -18,13 +18,48 @@
         records: records
       });
     },
+    credits: function() {
+      var credits;
+      credits = this.state.records.filter(function(val) {
+        return val.amount >= 0;
+      });
+      return credits.reduce((function(prev, curr) {
+        return prev + parseFloat(curr.amount);
+      }), 0);
+    },
+    debits: function() {
+      var debits;
+      debits = this.state.records.filter(function(val) {
+        return val.amount < 0;
+      });
+      return debits.reduce((function(prev, curr) {
+        return prev + parseFloat(curr.amount);
+      }), 0);
+    },
+    balance: function() {
+      return this.debits() + this.credits();
+    },
     render: function() {
       var record;
       return React.DOM.div({
         className: 'records'
       }, React.DOM.h2({
         className: 'title'
-      }, 'Records'), React.createElement(RecordForm, {
+      }, 'Records'), React.DOM.div({
+        className: 'row'
+      }, React.createElement(AmountBox, {
+        type: 'success',
+        amount: this.credits(),
+        text: 'Credit'
+      }), React.createElement(AmountBox, {
+        type: 'danger',
+        amount: this.debits(),
+        text: 'Debit'
+      }), React.createElement(AmountBox, {
+        type: 'info',
+        amount: this.balance(),
+        text: 'Balance'
+      })), React.createElement(RecordForm, {
         handleNewRecord: this.addRecord
       }), React.DOM.hr(null), React.DOM.table({
         className: 'table table-bordered'
