@@ -12,9 +12,21 @@
     },
     addRecord: function(record) {
       var records;
-      records = this.state.records.slice();
-      records.push(record);
+      records = React.addons.update(this.state.records, {
+        $push: [record]
+      });
       return this.setState({
+        records: records
+      });
+    },
+    deleteRecord: function(record) {
+      var index, records;
+      index = this.state.records.indexOf(record);
+      records = React.addons.update(this.state.records, {
+        $splice: [[index, 1]]
+      });
+      records.splice(index, 1);
+      return this.replaceState({
         records: records
       });
     },
@@ -63,7 +75,7 @@
         handleNewRecord: this.addRecord
       }), React.DOM.hr(null), React.DOM.table({
         className: 'table table-bordered'
-      }, React.DOM.thead(null, React.DOM.tr(null, React.DOM.th(null, 'Date'), React.DOM.th(null, 'Title'), React.DOM.th(null, 'Amount'))), React.DOM.tbody(null, (function() {
+      }, React.DOM.thead(null, React.DOM.tr(null, React.DOM.th(null, 'Date'), React.DOM.th(null, 'Title'), React.DOM.th(null, 'Amount'), React.DOM.th(null, 'Actions'))), React.DOM.tbody(null, (function() {
         var i, len, ref, results;
         ref = this.state.records;
         results = [];
@@ -71,7 +83,8 @@
           record = ref[i];
           results.push(React.createElement(Record, {
             key: record.id,
-            record: record
+            record: record,
+            handleDeleteRecord: this.deleteRecord
           }));
         }
         return results;

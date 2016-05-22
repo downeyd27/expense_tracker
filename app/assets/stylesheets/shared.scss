@@ -1,17 +1,7 @@
-.debug { outline: 1px solid red; }
+.debug { outline: 0px solid red; }
 h1,h2,h3,p,div,span,section,figure,img,ul,li,a,footer,nav {
   @extend .debug;
  }
-
-// .btn {
-//   background-color: lightgrey;
-//   border: 1px solid black;
-//   border-radius: 5px;
-//   margin: 10px;
-//   transition: all 0.5s ease-in-out;
-//   padding: 5px;
-//   &:hover { box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75); }
-// }
 
 .sr-only {
   position: absolute;
@@ -69,63 +59,6 @@ a {
   &:link    { color: #c00; }
   &:hover   { color: #00c }
   &:active  { color: #ccc }
-}
-
-
-// NAVBAR CSS
-
-nav {
-  background-color: grey;
-  border-bottom: 1px solid black;
-  box-shadow: 0px 3px 7px 0px rgba(50, 50, 50, 0.75);
-  font-size: 1.5em;
-  .navContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  ul {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-flow: row nowrap;
-    list-style-type: none;
-    padding: 0;
-  }
-  a {
-    @extend .btn;
-  }
-}
-// Media Queries
-@media screen and (min-width: 1001px) {
-
-}
-
-@media screen and (max-width: 1000px) and (min-width: 700px) {
-
-}
-
-@media screen and (max-width: 699px) and (min-width: 520px) {
-
-}
-
-@media screen and (max-width: 520px) {
-  .navContainer {
-    flex-direction: column;
-    // justify-content: center;
-    // align-items: center;
-  }
-
-}
-/* Medium screens */
-@media all and (max-width: 800px) {
-}
-
-/* Small screens */
-@media all and (max-width: 500px) {
-  .navContainer {
-
-  }
 }
 
 .socialMediaContainer {
