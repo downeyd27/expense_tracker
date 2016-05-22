@@ -16,7 +16,8 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :letter_opener
 
-
+  # React config
+  config.react.variant = :development
 
 
   # Settings specified here will take precedence over those in config/application.rb.
