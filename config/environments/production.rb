@@ -10,6 +10,8 @@ Rails.application.configure do
     }
   }
 
+  # React config
+  config.react.variant = :production
 
 
 
