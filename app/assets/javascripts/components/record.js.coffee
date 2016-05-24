@@ -1,4 +1,9 @@
 @Record = React.createClass
+  getInitialState: ->
+    edit: false
+  handleToggle:(e) ->
+    e.preventDefault()
+    @setState edit: !@state.edit
   handleDelete: (e) ->
     e.preventDefault()
     $.ajax
@@ -14,6 +19,10 @@
       React.DOM.td null, amountFormat(@props.record.amount)
       React.DOM.td null,
         React.DOM.a
-          className: 'btn btn-primary'
+          className: 'btn btn-default'
+          onClick: @handleToggle
+          'Edit'
+        React.DOM.a
+          className: 'btn btn-danger'
           onClick: @handleDelete
           'Delete'
