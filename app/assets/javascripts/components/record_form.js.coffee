@@ -1,7 +1,7 @@
 @RecordForm = React.createClass
   getInitialState: ->
-    title: ''
-    date: ''
+    title:  ''
+    date:   ''
     amount: ''
   valid: ->
     @state.title && @state.date && @state.amount
