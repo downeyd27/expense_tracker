@@ -14,19 +14,25 @@ h1,h2,h3,p,div,span,section,figure,img,ul,li,a,footer,nav {
   border: 0;
 }
 
-html {
-  height: 100%;
-}
-
 .site {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  background-color: lightgrey;
+  background-color: $paradiso;
 }
 
 .siteContent {
   flex: 1;
+}
+
+th {
+  font-weight: bolder;
+  font-size: 1.5em
+}
+
+td {
+  font-weight: bold;
+  font-size: 1.25em;
 }
 
 h1, h2 {
@@ -35,7 +41,7 @@ h1, h2 {
 
 h1, h2, h3 {
   text-align: center;
-  background-color: lightgrey;
+  background-color: $iceberg;
   border: 1px solid black;
   padding: .4em .4em;
   font-family: serif;
@@ -71,8 +77,7 @@ a {
 
 footer {
   border-top: 1px solid black;
-  box-shadow: 0px -2px 7px 0px rgba(50, 50, 50, 0.75);
-  background-color: grey;
+  background-color: $iceberg;
 }
 
 // FLASH MESSAGE CSS
