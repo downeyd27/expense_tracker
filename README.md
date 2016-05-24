@@ -4,7 +4,9 @@ Easy to use app to add financial records for credits, debits, and to view your b
 
 ## Purpose
 
-Built from a tutorial to expose myself to React.js and CoffeeScript on the Ruby on Rails framework.  During this project I experienced a "```React.findDOMNode``` is not a function" error.  Through researching through React documentation I came aware that the new proper syntax is ```ReactDOM.findDOMNode```.
+Single page app [tutorial](https://www.airpair.com/reactjs/posts/reactjs-a-guide-for-rails-developers#setstate-replacestate-deleting-records)built to expose myself to React.js and CoffeeScript on the Ruby on Rails framework.  I can see the user experience is greatly enhanced with React's asynchronous calls for updates and the DOM's need to only change those things with state change.
+
+During this project I experienced a "```React.findDOMNode``` is not a function" error.  Through researching through React documentation and google I came aware that the new proper syntax is ```ReactDOM.findDOMNode```.
 
 ## Getting Started
 
@@ -12,6 +14,16 @@ Built from a tutorial to expose myself to React.js and CoffeeScript on the Ruby 
 - ```cd expense_tracker```
 - ```bundle install```
 - ```rails server```
+- Open a web browser to localhost:3000
+- Keep track of expenses.
+
+## Built With
+
+* Ruby 2.2.2
+* Rails 4.2.6
+* React-Rails 1.7
+* Atom - Texteditor
+* Bootstrap SASS
 
 ### Dependencies
 
@@ -38,16 +50,9 @@ Built from a tutorial to expose myself to React.js and CoffeeScript on the Ruby 
 * [Dalli](https://github.com/petergoldstein/dalli)
 * [Memcachier](https://github.com/memcachier/dalli)
 * [Launchy](https://github.com/copiousfreetime/launchy)
+* [Bootstrap Sass](https://github.com/twbs/bootstrap-sass)
 * [Sass Rails](https://github.com/rails/sass-rails)
-* [React.js for RoR](https://github.com/reactjs/react-rails)
-
-## Built With
-
-* Ruby 2.2.2
-* Rails 4.2.6
-* React-Rails 1.7
-* Atom - Texteditor
-* Bootstrap SASS
+* [React Rails](https://github.com/reactjs/react-rails)
 
 ## Authors
 
