@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'home_pages#index'
+  root 'records#index'
 
   resources :records
 end
