@@ -4,7 +4,7 @@ Easy to use app to add financial records for credits, debits, and to view your b
 
 ## Purpose
 
-Single page app [tutorial](https://www.airpair.com/reactjs/posts/reactjs-a-guide-for-rails-developers#setstate-replacestate-deleting-records)built to expose myself to React.js and CoffeeScript on the Ruby on Rails framework.  I can see the user experience is greatly enhanced with React's asynchronous calls for updates and the DOM's need to only change those things with state change.
+Single page app [tutorial ](https://www.airpair.com/reactjs/posts/reactjs-a-guide-for-rails-developers#setstate-replacestate-deleting-records)built to expose myself to React.js and CoffeeScript on the Ruby on Rails framework.  I can see the user experience is greatly enhanced with React's asynchronous calls for updates and the DOM's need to only change those things with state change.
 
 During this project I experienced a "```React.findDOMNode``` is not a function" error.  Through researching through React documentation and google I came aware that the new proper syntax is ```ReactDOM.findDOMNode```.
 
