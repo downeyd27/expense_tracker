@@ -2,6 +2,10 @@
 
 Easy to use app to add financial records for credits, debits, and to view your balance.
 
+## Author
+
+* **Dillon Downey** - [Personal website](http://dillondowney.herokuapp.com/)
+
 ## Purpose
 
 Single page app [tutorial ](https://www.airpair.com/reactjs/posts/reactjs-a-guide-for-rails-developers#setstate-replacestate-deleting-records)built to expose myself to React.js and CoffeeScript on the Ruby on Rails framework.  I can see the user experience is greatly enhanced with React's asynchronous calls for updates and the DOM's need to only change those things with state change.
@@ -53,10 +57,6 @@ During this project I experienced a "```React.findDOMNode``` is not a function" 
 * [Bootstrap Sass](https://github.com/twbs/bootstrap-sass)
 * [Sass Rails](https://github.com/rails/sass-rails)
 * [React Rails](https://github.com/reactjs/react-rails)
-
-## Authors
-
-* **Dillon Downey** - [Personal website](https://github.com/dillondowney.herokuapp.com)
 
 ## License
 
